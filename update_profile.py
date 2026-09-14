@@ -46,13 +46,24 @@ def generate_markdown(data):
 
     md = []
     
-    # 1. CLEAN TOP HEADER WITH REAL NAME
+    # 1. HERO BANNER WITH REAL NAME & WAVING GRADIENT
+    import urllib.parse
+    encoded_name = urllib.parse.quote(p.get("name", "Jay Yogendrakumar Patel"))
+    desc_text = "AI Systems Engineer • Autonomous Agents • Cloud"
+    encoded_desc = urllib.parse.quote(desc_text)
+    banner_url = (
+        f"https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=10,24,38"
+        f"&height=220&section=header&text={encoded_name}&fontSize=38&fontAlignY=36&fontColor=38BDF8"
+        f"&desc={encoded_desc}&descAlignY=62&descAlign=50&descSize=17"
+    )
+
     md.append('<div align="center">')
-    md.append(f'  <h1>{p.get("name", "Jay Yogendrakumar Patel")}</h1>')
-    md.append(f'  <h3>{p.get("tagline", "")}</h3>')
-    md.append(f'  <p><b>{p.get("education", "")}</b></p>')
+    md.append(f'  <img src="{banner_url}" width="100%" alt="{p.get("name", "Jay Yogendrakumar Patel")} Header Banner" />')
+    md.append('  <p><b>' + p.get("education", "B.Tech Computer Engineering (2025–2029), LDRP-ITR, Gujarat Technological University (GTU)") + '</b></p>')
     md.append('')
-    
+    # ANIMATED TYPING (Direct image, no git.io anchor wrapper)
+    md.append(f'  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&lines={typing_lines}" alt="Typing Headline" />')
+    md.append('')
     # BADGES - Inline without extra breaks or dead links to prevent broken image / stacking bugs
     md.append('  <p align="center">')
     md.append('    <img src="https://img.shields.io/badge/ISRO_Hackathon-Grand_Finale_Finalist-F59E0B?style=for-the-badge&logo=spacex&logoColor=white" alt="ISRO Finalist" />&nbsp;')
@@ -60,10 +71,6 @@ def generate_markdown(data):
     md.append('    <img src="https://img.shields.io/badge/IBM_SkillsBuild-Agentic_AI_Certified-0062FF?style=for-the-badge&logo=ibm&logoColor=white" alt="IBM Certified" />&nbsp;')
     md.append('    <img src="https://img.shields.io/badge/GitHub_Pro-Student_Pack-0969DA?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro" />')
     md.append('  </p>')
-    md.append('')
-    
-    # ANIMATED TYPING (Direct image, no git.io anchor wrapper)
-    md.append(f'  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&lines={typing_lines}" alt="Typing Headline" />')
     md.append('</div>')
     md.append('')
     

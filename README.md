@@ -1,7 +1,8 @@
 <div align="center">
-  <h1>Jay Yogendrakumar Patel</h1>
-  <h3>AI/ML Systems Engineer • Generative AI & Autonomous Agents • Full-Stack Developer</h3>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=10,24,38&height=220&section=header&text=Jay%20Yogendrakumar%20Patel&fontSize=38&fontAlignY=36&fontColor=38BDF8&desc=AI%20Systems%20Engineer%20%E2%80%A2%20Autonomous%20Agents%20%E2%80%A2%20Cloud&descAlignY=62&descAlign=50&descSize=17" width="100%" alt="Jay Yogendrakumar Patel Header Banner" />
   <p><b>B.Tech Computer Engineering (2025–2029), LDRP-ITR, Gujarat Technological University (GTU)</b></p>
+
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&lines=ISRO+Bharatiya+Antariksh+Hackathon+Grand+Finale+Finalist;Google+Cloud+Gen+AI+Academy+Selected+APAC+Builder;Building+Autonomous+Agentic+Systems+%26+LLM+Routing+Gateways;B.Tech+Computer+Engineering+%40+LDRP-ITR%2C+GTU;Generative+AI+%28Diffusion+%26+GANs%29+%E2%80%A2+MCP+%E2%80%A2+Azure" alt="Typing Headline" />
 
   <p align="center">
     <img src="https://img.shields.io/badge/ISRO_Hackathon-Grand_Finale_Finalist-F59E0B?style=for-the-badge&logo=spacex&logoColor=white" alt="ISRO Finalist" />&nbsp;
@@ -9,8 +10,6 @@
     <img src="https://img.shields.io/badge/IBM_SkillsBuild-Agentic_AI_Certified-0062FF?style=for-the-badge&logo=ibm&logoColor=white" alt="IBM Certified" />&nbsp;
     <img src="https://img.shields.io/badge/GitHub_Pro-Student_Pack-0969DA?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro" />
   </p>
-
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&lines=ISRO+Bharatiya+Antariksh+Hackathon+Grand+Finale+Finalist;Google+Cloud+Gen+AI+Academy+Selected+APAC+Builder;Building+Autonomous+Agentic+Systems+%26+LLM+Routing+Gateways;B.Tech+Computer+Engineering+%40+LDRP-ITR%2C+GTU;Generative+AI+%28Diffusion+%26+GANs%29+%E2%80%A2+MCP+%E2%80%A2+Azure" alt="Typing Headline" />
 </div>
 
 > **About Me**: B.Tech Computer Engineering student (2025–2029) at LDRP-ITR, Gujarat Technological University, building in AI/ML and generative AI — with recent work spanning satellite image reconstruction, agentic AI systems, and full-stack ESG/industrial platforms. ISRO Bharatiya Antariksh Hackathon 2026 Grand Finale finalist.
