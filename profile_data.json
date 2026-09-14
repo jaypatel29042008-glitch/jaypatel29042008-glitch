@@ -1,21 +1,23 @@
 {
   "personal": {
-    "name": "Jay Patel",
-    "full_name": "Jay Yogendrakumar Patel",
+    "name": "Jay Yogendrakumar Patel",
+    "display_name": "Jay Patel",
     "username": "jaypatel29042008-glitch",
     "email": "jaypatel29042008@gmail.com",
     "linkedin": "https://linkedin.com/in/jay-patel-01ab3b377",
     "github": "https://github.com/jaypatel29042008-glitch",
-    "location": "Gandhinagar / Ahmedabad, Gujarat, India",
-    "tagline": "AI Systems Engineer \u2022 Autonomous Agents \u2022 Cloud & Data Architecture",
-    "education": "B.E. Computer Engineering, LDRP Institute of Technology & Research (LDRP-ITR), GTU (2025\u20132029)"
+    "location": "Ahmedabad / Gandhinagar, Gujarat, India",
+    "tagline": "AI/ML Systems Engineer \u2022 Generative AI & Autonomous Agents \u2022 Full-Stack Developer",
+    "education": "B.Tech Computer Engineering (2025\u20132029), LDRP-ITR, Gujarat Technological University (GTU)",
+    "bio_block": "B.Tech Computer Engineering student (2025\u20132029) at LDRP-ITR, Gujarat Technological University, building in AI/ML and generative AI \u2014 with recent work spanning satellite image reconstruction, agentic AI systems, and full-stack ESG/industrial platforms. ISRO Bharatiya Antariksh Hackathon 2026 Grand Finale finalist.",
+    "focus_areas": "Generative AI (diffusion models, GANs) \u2022 Agentic systems & MCP \u2022 Full-stack web (Next.js, FastAPI, React) \u2022 Cloud & data engineering"
   },
   "major_honors": [
     {
       "title": "ISRO Bharatiya Antariksh Hackathon 2026",
       "badge": "Grand Finale Finalist",
       "badge_color": "F59E0B",
-      "desc": "Selected for the national 30-hour in-person Grand Finale (Aug 6\u20137, 2026). Engineered the LISS-IV Generative AI Satellite Cloud Removal Solution to reconstruct obscured optical satellite imagery."
+      "desc": "30-hr national in-person Grand Finale (Aug 6\u20137, 2026). Engineered the LISS-IV Generative AI Satellite Cloud Removal Solution to reconstruct obscured optical satellite imagery."
     },
     {
       "title": "Google Cloud Gen AI Academy APAC",
@@ -25,9 +27,9 @@
     },
     {
       "title": "Smart India Hackathon (SIH) 2026",
-      "badge": "Team Lead",
+      "badge": "Team Lead \u2014 Institutional Nomination",
       "badge_color": "10B981",
-      "desc": "Led Team Debug Dynasty (ToolSight AI) to official internal institutional nomination at LDRP-ITR."
+      "desc": "Led Team Debug Dynasty (ToolSight AI: Edge-AI CNC tool-wear & RUL prediction) to internal institutional nomination at LDRP-ITR."
     },
     {
       "title": "Odoo Hackathon 2026",
@@ -45,7 +47,7 @@
       "title": "GeeksforGeeks (GFG) Campus Mantri 2026",
       "badge": "Campus Ambassador",
       "badge_color": "2F9E44",
-      "desc": "Official Campus Ambassador and technical evangelist representing GeeksforGeeks at LDRP-ITR."
+      "desc": "Official Campus Ambassador and technical community evangelist representing GeeksforGeeks at LDRP-ITR."
     }
   ],
   "internships_and_simulations": [
@@ -53,13 +55,13 @@
       "program": "IBM SkillsBuild \u00d7 AICTE \u00d7 BharatCares",
       "role": "Data Analytics with AI Academic Intern",
       "period": "Fall 2026 (Active)",
-      "desc": "Hands-on data analytics pipelines, exploratory ML, and AI agent architectures."
+      "desc": "Enterprise data analytics pipelines, exploratory ML, and AI agent architectures."
     },
     {
       "program": "CodeAlpha",
       "role": "Artificial Intelligence Intern",
       "period": "Completed June 2026",
-      "desc": "Engineered YOLOv8 real-time object tracking with frame ID persistence, NLP FAQ cosine similarity retrieval, and a 50+ language translation tool."
+      "desc": "Delivered YOLOv8 real-time object tracking with frame ID persistence, NLP FAQ cosine similarity retrieval, and a 50+ language desktop translator."
     },
     {
       "program": "Deloitte Australia Technology Simulation",
@@ -71,85 +73,98 @@
       "program": "JPMorgan Chase & PwC US Simulations",
       "role": "Engineering & Technology Consulting",
       "period": "Forage Verified",
-      "desc": "Completed industry simulations covering agile development, financial data systems, and enterprise cloud consulting."
+      "desc": "Completed industry simulations covering agile software development, financial data systems, and enterprise cloud consulting."
     }
   ],
   "flagship_projects": [
     {
-      "name": "Friday-AI Web Assistant",
+      "name": "BrainWave \u2014 LISS-IV Cloud Removal",
+      "url": "https://github.com/jaypatel29042008-glitch",
+      "desc": "Diffusion-bridge generative model (cGAN + DDPM) reconstructing cloud-obscured LISS-IV satellite imagery from Resourcesat-2/2A, correcting for missing Blue-band and SWIR deficits. Built for ISRO Bharatiya Antariksh Hackathon 2026 (Grand Finale Finalist).",
+      "stack": [
+        "Python",
+        "PyTorch",
+        "GeoTIFF",
+        "Remote Sensing",
+        "Diffusion"
+      ]
+    },
+    {
+      "name": "ToolSight AI (SIH 2026)",
+      "url": "https://github.com/jaypatel29042008-glitch",
+      "desc": "Edge-AI CNC tool-wear and Remaining-Useful-Life (RUL) prediction system. Full working frontend and backend built from reverse-engineered design mockups. Live prototype deployed for SIH 2026 (Team Debug Dynasty).",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "TensorFlow.js",
+        "Next.js",
+        "Edge AI"
+      ]
+    },
+    {
+      "name": "FRIDAY AI Assistant",
       "url": "https://github.com/jaypatel29042008-glitch/Friday-ai",
-      "desc": "Autonomous personal AI web assistant combining a real-time voice pipeline, multi-depth reasoning tiers, web search, task delegation, and a live statistics dashboard.",
+      "desc": "Personal AI web assistant combining a real-time voice pipeline, an MCP server, multi-depth reasoning tiers, web search, task delegation, and a live statistics dashboard. Packaged as a one-click installable Python package.",
       "stack": [
         "Python",
         "Flask",
         "LiveKit",
         "MCP",
-        "JavaScript",
-        "CSS3"
+        "JavaScript"
       ]
     },
     {
-      "name": "Clear Sky AI",
-      "url": "https://github.com/jaypatel29042008-glitch/clear-sky-ai",
-      "desc": "Intelligent atmospheric forecasting and meteorological analytics engine providing real-time environmental inference and predictive climate modeling.",
-      "stack": [
-        "Python",
-        "Scikit-Learn",
-        "APIs",
-        "Data Analytics"
-      ]
-    },
-    {
-      "name": "LISS-IV Satellite Cloud Removal System",
+      "name": "EcoSphere ESG Platform",
       "url": "https://github.com/jaypatel29042008-glitch",
-      "desc": "ISRO Hackathon Finalist solution reconstructing obscured optical ground features in Resourcesat satellite imagery using synthetic band diffusion algorithms.",
+      "desc": "Web application for enterprise ESG tracking, emissions accounting, and compliance reporting, built into a production-ready platform with robust authentication and login flows.",
       "stack": [
-        "PyTorch",
-        "Remote Sensing",
-        "Computer Vision",
-        "Diffusion Models"
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Auth",
+        "REST APIs"
+      ]
+    },
+    {
+      "name": "God's Eye Workspace",
+      "url": "https://github.com/jaypatel29042008-glitch",
+      "desc": "Personal AI command center: React chat interface supporting multiple autonomous agent modes, file attachments, voice input, MCP protocol connectors, and persistent memory architecture.",
+      "stack": [
+        "React",
+        "MCP",
+        "Persistent Memory",
+        "Agentic Loops"
       ]
     },
     {
       "name": "Deloitte Telemetry Engine",
       "url": "https://github.com/jaypatel29042008-glitch/forage-Deloitte-task",
-      "desc": "High-throughput JSON schema unification engine developed for Deloitte's technology simulation, standardizing disparate device formats.",
+      "desc": "High-throughput JSON schema unification engine developed for Deloitte's technology job simulation, standardizing disparate device telemetry formats into enterprise structures.",
       "stack": [
         "Python",
         "JSON Schema",
         "Data Pipelines"
       ]
-    },
-    {
-      "name": "CodeAlpha AI Internship Suite",
-      "url": "https://github.com/jaypatel29042008-glitch/CodeAlpha_AI_Internship",
-      "desc": "YOLOv8 real-time object tracking with frame ID persistence, NLP FAQ retrieval system with cosine similarity, and multi-language desktop translator.",
-      "stack": [
-        "YOLOv8",
-        "OpenCV",
-        "NLP",
-        "Scikit-Learn"
-      ]
     }
   ],
   "certifications": [
     {
-      "name": "Generative AI & AI Agents Program",
-      "issuer": "IBM SkillsBuild (Credly)",
+      "name": "IBM SkillsBuild \u2014 Generative AI & AI Agents Program",
+      "issuer": "IBM",
       "date": "Aug 2026"
     },
     {
-      "name": "Make Agentic AI Work for You",
-      "issuer": "IBM SkillsBuild (Credly)",
-      "date": "Aug 2026"
+      "name": "IBM SkillsBuild \u2014 Make Agentic AI Work for You",
+      "issuer": "Credly Verified",
+      "date": "Aug 19, 2026"
     },
     {
-      "name": "Claude 101 Certification",
-      "issuer": "Anthropic Academy",
-      "date": "Sept 2026"
+      "name": "Anthropic Academy \u2014 Claude 101 Certification",
+      "issuer": "Anthropic",
+      "date": "Sept 2, 2026"
     },
     {
-      "name": "Model Context Protocol: Advanced Topics",
+      "name": "Model Context Protocol (MCP): Advanced Topics",
       "issuer": "Anthropic",
       "date": "2026"
     },
@@ -159,19 +174,24 @@
       "date": "2026"
     },
     {
-      "name": "Claude with Google Cloud Vertex AI & Bedrock",
-      "issuer": "Anthropic",
-      "date": "2026"
-    },
-    {
-      "name": "5-Day AI Agents Intensive",
-      "issuer": "Google & Kaggle",
-      "date": "July 2026"
+      "name": "Google & Kaggle \u2014 5-Day AI Agents Vibe Coding Intensive",
+      "issuer": "Google / Kaggle",
+      "date": "Jul 2026"
     },
     {
       "name": "Google Prompting Essentials Badge",
       "issuer": "Google / Coursera",
       "date": "2026"
+    },
+    {
+      "name": "Forage \u2014 PwC US Technology Consulting Simulation",
+      "issuer": "PwC US",
+      "date": "Aug 12, 2026"
+    },
+    {
+      "name": "Forage \u2014 JPMorganChase Investment Banking Simulation",
+      "issuer": "JPMorgan Chase",
+      "date": "Jun 24, 2026"
     },
     {
       "name": "Microsoft Security Copilot & Applied Skills",

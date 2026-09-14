@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Automated GitHub Profile README Generator & Sync Engine
-Author: Jay Patel (@jaypatel29042008-glitch)
+Author: Jay Yogendrakumar Patel (@jaypatel29042008-glitch)
 
 Usage:
   python update_profile.py          # Regenerates README.md from profile_data.json
@@ -12,10 +12,9 @@ import json
 import os
 import sys
 import subprocess
-import sys
+from datetime import datetime
 
 sys.stdout.reconfigure(encoding='utf-8')
-from datetime import datetime
 
 DIR_PATH = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(DIR_PATH, "profile_data.json")
@@ -37,40 +36,41 @@ def generate_markdown(data):
     
     today_str = datetime.now().strftime("%B %d, %Y")
     
-    # Typing SVG lines
     typing_lines = (
         "ISRO+Bharatiya+Antariksh+Hackathon+Grand+Finale+Finalist;"
         "Google+Cloud+Gen+AI+Academy+Selected+APAC+Builder;"
         "Building+Autonomous+Agentic+Systems+%26+LLM+Routing+Gateways;"
-        "B.E.+Computer+Engineering+%40+LDRP-ITR%2C+GTU;"
-        "Python+%E2%80%A2+PyTorch+%E2%80%A2+Azure+Cloud+%E2%80%A2+TypeScript"
+        "B.Tech+Computer+Engineering+%40+LDRP-ITR%2C+GTU;"
+        "Generative+AI+%28Diffusion+%26+GANs%29+%E2%80%A2+MCP+%E2%80%A2+Azure"
     )
 
     md = []
     
-    # HERO BANNER
-    md.append('<!-- HERO BANNER -->')
+    # 1. CLEAN TOP HEADER WITH REAL NAME
     md.append('<div align="center">')
-    md.append(f'  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=10,24,38&height=210&section=header&text={p.get("name", "Jay Patel")}&fontSize=48&fontAlignY=36&fontColor=38BDF8&desc={p.get("tagline", "")}&descAlignY=62&descAlign=50&descSize=18" width="100%" alt="Header Banner" />')
-    md.append('  <br/>')
-    md.append('  <!-- ANIMATED TYPING HEADLINE -->')
-    md.append(f'  <a href="https://git.io/typing-svg">')
-    md.append(f'    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines={typing_lines}" alt="Typing Headline" />')
-    md.append('  </a>')
-    md.append('  <br/><br/>')
+    md.append(f'  <h1>{p.get("name", "Jay Yogendrakumar Patel")}</h1>')
+    md.append(f'  <h3>{p.get("tagline", "")}</h3>')
+    md.append(f'  <p><b>{p.get("education", "")}</b></p>')
+    md.append('')
     
-    # LIVE STATUS BADGES
-    md.append('  <!-- TELEMETRY BADGES -->')
+    # BADGES - Inline without extra breaks or dead links to prevent broken image / stacking bugs
     md.append('  <p align="center">')
-    md.append(f'    <a href="{p.get("github")}">')
-    md.append(f'      <img src="https://komarev.com/ghpvc/?username={p.get("username")}&color=38bdf8&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views" />')
-    md.append('    </a>')
-    md.append('    <img src="https://img.shields.io/badge/ISRO_Hackathon-Grand_Finale_Finalist-F59E0B?style=for-the-badge&logo=spacex&logoColor=white" alt="ISRO Finalist" />')
-    md.append('    <img src="https://img.shields.io/badge/Google_Cloud-Selected_APAC_Builder-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud Builder" />')
-    md.append('    <img src="https://img.shields.io/badge/IBM_SkillsBuild-Agentic_AI_Certified-0062FF?style=for-the-badge&logo=ibm&logoColor=white" alt="IBM Certified" />')
+    md.append('    <img src="https://img.shields.io/badge/ISRO_Hackathon-Grand_Finale_Finalist-F59E0B?style=for-the-badge&logo=spacex&logoColor=white" alt="ISRO Finalist" />&nbsp;')
+    md.append('    <img src="https://img.shields.io/badge/Google_Cloud-Selected_APAC_Builder-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud Builder" />&nbsp;')
+    md.append('    <img src="https://img.shields.io/badge/IBM_SkillsBuild-Agentic_AI_Certified-0062FF?style=for-the-badge&logo=ibm&logoColor=white" alt="IBM Certified" />&nbsp;')
     md.append('    <img src="https://img.shields.io/badge/GitHub_Pro-Student_Pack-0969DA?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pro" />')
     md.append('  </p>')
+    md.append('')
+    
+    # ANIMATED TYPING (Direct image, no git.io anchor wrapper)
+    md.append(f'  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&lines={typing_lines}" alt="Typing Headline" />')
     md.append('</div>')
+    md.append('')
+    
+    # BIO BLOCK (From Jay_Patel_GitHub_Profile_Content.pdf)
+    md.append('> **About Me**: ' + p.get("bio_block", ""))
+    md.append('>')
+    md.append('> **Focus Areas**: ' + p.get("focus_areas", ""))
     md.append('')
     md.append('---')
     md.append('')
@@ -79,17 +79,17 @@ def generate_markdown(data):
     md.append('### ⚡ System Telemetry & Verified Profile')
     md.append('')
     md.append('```zsh')
-    md.append(f'jaypatel@frontier-workstation:~$ neofetch --profile')
+    md.append('jaypatel@frontier-workstation:~$ neofetch --profile')
     md.append('----------------------------------------------------')
-    md.append(f'Candidate    : {p.get("full_name", "Jay Yogendrakumar Patel")}')
+    md.append(f'Candidate    : {p.get("name", "Jay Yogendrakumar Patel")}')
     md.append(f'Education    : {p.get("education", "")}')
     md.append(f'Location     : {p.get("location", "")}')
-    md.append('Specialization: Autonomous Agent Loops, LLM Gateway Routing & Context Preservation')
+    md.append('Specialization: Autonomous Agent Loops, LLM Gateway Routing & Remote Sensing Diffusion')
     md.append('Honors       : ISRO Bharatiya Antariksh Hackathon Finalist • Google Cloud APAC Builder')
     md.append('Leadership   : GeeksforGeeks Campus Mantri (LDRP-ITR) • SIH 2026 Team Lead')
     md.append('Internships  : IBM SkillsBuild × AICTE (Active) • CodeAlpha AI Intern (Completed)')
     md.append('Simulations  : Deloitte Technology • JPMorgan Chase Software Eng • PwC US Consulting')
-    md.append('Status       : 🟢 Engineering robust agentic workflows & next-generation cloud architectures')
+    md.append('Status       : 🟢 Engineering robust agentic workflows & next-generation AI architectures')
     md.append('```')
     md.append('')
     md.append('---')
@@ -159,7 +159,7 @@ def generate_markdown(data):
     md.append('---')
     md.append('')
 
-    # FLAGSHIP REPOSITORIES
+    # FLAGSHIP REPOSITORIES (Curated exact projects from PDF)
     md.append('### 🚀 Flagship Repositories & Engineering Artifacts')
     md.append('')
     md.append('<table width="100%">')
@@ -168,7 +168,7 @@ def generate_markdown(data):
         for j in range(2):
             if i + j < len(projects):
                 proj = projects[i + j]
-                tags_str = " ".join([f'<img src="https://img.shields.io/badge/{t}-24292F?style=flat-square" />' for t in proj.get("stack", [])])
+                tags_str = " ".join([f'<img src="https://img.shields.io/badge/{t.replace(" ", "_")}-24292F?style=flat-square" />' for t in proj.get("stack", [])])
                 md.append('    <td width="50%" valign="top">')
                 md.append(f'      <h3><a href="{proj["url"]}">{proj["name"]}</a></h3>')
                 md.append(f'      <p>{proj["desc"]}</p>')
@@ -185,7 +185,7 @@ def generate_markdown(data):
     # CERTIFICATIONS & CREDENTIALS
     md.append('### 📜 Verified Certifications & Credentials')
     md.append('')
-    md.append('| Credential Title | Issuing Authority | Completion | Verification Status |')
+    md.append('| Credential Title | Issuing Authority | Date | Verification Status |')
     md.append('|---|---|---|---|')
     for c in certs:
         md.append(f'| **{c["name"]}** | {c["issuer"]} | {c["date"]} | Verified Credential |')
@@ -222,8 +222,8 @@ def generate_markdown(data):
     md.append('| Technical Discipline | Tooling & Implementations |')
     md.append('|---|---|')
     md.append('| **Autonomous AI & Reasoning** | Multi-agent swarms, LLM router combos (OmniRoute), context compression (Headroom), prompt tuning |')
-    md.append('| **Backend & Cloud Services** | Python (Flask, RESTful APIs), Node.js, Express, Microsoft Azure Cloud ($100 Student Tier), Linux (WSL2) |')
-    md.append('| **Data Science & ML Pipelines**| Heterogeneous JSON telemetry unification, Scikit-Learn, Pandas, predictive modeling, RAG architectures |')
+    md.append('| **Backend & Cloud Services** | Python (FastAPI, Flask), Next.js, Microsoft Azure ($100 Student Tier), Linux (WSL2) |')
+    md.append('| **Data Science & ML Pipelines**| PyTorch, GeoTIFF remote sensing, Diffusion models, Scikit-Learn, Pandas, RAG architectures |')
     md.append('| **Productivity & Dev Rig**    | JetBrains Toolbox, Termius SSH, GitKraken, VS Code, Bootstrap Studio, Postman |')
     md.append('')
     md.append('</div>')
@@ -265,7 +265,7 @@ def generate_markdown(data):
     md.append('')
     md.append('<div align="center">')
     md.append(f'  <a href="{p.get("github")}">')
-    md.append('    <img src="https://img.shields.io/badge/GitHub-jaypatel29042008--glitch-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />')
+    md.append(f'    <img src="https://img.shields.io/badge/GitHub-{p.get("username")}-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />')
     md.append('  </a>')
     md.append('  &nbsp;')
     md.append(f'  <a href="{p.get("linkedin")}">')
@@ -298,7 +298,7 @@ def update(push=False):
         try:
             subprocess.run(["git", "add", "README.md", "profile_data.json", "update_profile.py"], cwd=DIR_PATH, check=True)
             today_tag = datetime.now().strftime("%Y-%m-%d")
-            commit_msg = f"chore(profile): sync monthly achievements, verified honors & telemetry [{today_tag}]"
+            commit_msg = f"fix(profile): display full name, bio block, and fix badge alignment [{today_tag}]"
             subprocess.run(["git", "commit", "-m", commit_msg], cwd=DIR_PATH, check=True)
             subprocess.run(["git", "push", "origin", "main"], cwd=DIR_PATH, check=True)
             print("[+] Profile successfully deployed live to GitHub!")
